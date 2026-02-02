@@ -1,6 +1,6 @@
 <?php
 
-Define("MyApp", true);
+
 require 'funcs.php';
 
 

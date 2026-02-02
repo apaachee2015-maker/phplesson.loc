@@ -1,8 +1,7 @@
 <?php
 
-defined("MyApp") or die('forbitten');
 
-echo 'Hello !';
+
 
 
 function dump($data)
