@@ -1,7 +1,7 @@
 <?php
 
-
-
+// defined('MYAPP') or die('Forbidden');
+//echo 'Hello';
 
 
 function dump($data)

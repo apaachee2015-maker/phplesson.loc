@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="p-3 mb-2 bg-dark text-white text-center">
-        <p> &copy; Apachee <?= date('Y')?> </p>
+        <p> &copy; Apachee <?= date('d.m.Y')?> </p>
     </div>
 
 </footer>

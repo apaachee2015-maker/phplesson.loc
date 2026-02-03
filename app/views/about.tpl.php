@@ -1,6 +1,5 @@
 <?php global $post;
 require 'incs/header.php' ?>
-
     <main class="main py-3">
         <div class="container">
             <div class="row">

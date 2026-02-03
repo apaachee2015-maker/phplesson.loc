@@ -1,10 +1,8 @@
 <?php
 
 
-require 'funcs.php';
 
-
-$title = 'GO HOME YO !';
+$title = 'My Blog:: Home';
 $posts = [
 
         1 => [
@@ -36,6 +34,8 @@ $posts = [
 
 ];
 
+//dd($posts);
+
 $recent_posts = [
         1 => [
                 'title' => 'An item',
@@ -59,5 +59,5 @@ $recent_posts = [
         ],
 ];
 
-require_once 'app/views/index.tpl.php';
+require_once VIEWS . '/index.tpl.php';
 

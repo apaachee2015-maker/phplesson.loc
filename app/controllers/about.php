@@ -1,7 +1,7 @@
 <?php
 
 
-// require 'funcs.php ';
+// require 'funcs.php';
 
 $post = '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Autem dolor earum error explicabo illum iste itaque maiores minus modi odio,
@@ -39,6 +39,6 @@ $recent_posts = [
     ],
 ];
 
-require_once 'app/views/about.tpl.php';
+require_once '../app/views/about.tpl.php';
 
 
