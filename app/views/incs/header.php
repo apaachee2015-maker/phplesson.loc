@@ -32,7 +32,7 @@
                             <a class="nav-link" href="#">Apachee-Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Go Travel</a>
+                            <a class="nav-link" href="posts/create">New Post</a>
                         </li>
 
 
