@@ -6,7 +6,7 @@ require 'incs/header.php' ?>
 
             <div class="col-md-12">
 
-                <h1><?= $post['title']?></h1>
+                <h1><?= h($post['title'])?></h1>
                 <?= $post['content'] ?>
 
             </div>

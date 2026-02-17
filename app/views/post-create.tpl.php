@@ -7,12 +7,10 @@ require 'incs/header.php' ?>
             <div class="col-md-12">
 
                 <h1>New Post</h1>
-
                 <form action="" method="post">
-
                     <div class="mb-3">
                         <label for="title" class="form-label">Post Title</label>
-                        <input name="title" type="text" class="form-control" id="title"
+                        <input value="<?=old('title')?>" name="title" type="text" class="form-control" id="title"
                         placeholder="Post title">
                        <?php if (isset($errors['title'])): ?>
                         <div class="invalid-feedback d-block">
@@ -21,13 +19,10 @@ require 'incs/header.php' ?>
                         <?php endif; ?>
                     </div>
 
-
-
-
                     <div class="mb-3">
                         <label for="excerpt" class="form-label">Excerpt</label>
                         <textarea name="excerpt" class="form-control" id="excerpt" rows="3"
-                        placeholder="Post Excerpt"></textarea>
+                        placeholder="Post Excerpt"><?=old('excerpt')?></textarea>
                         <?php if (isset($errors['excerpt'])): ?>
                             <div class="invalid-feedback d-block">
                                 <?= $errors['excerpt']  ?>
@@ -38,7 +33,7 @@ require 'incs/header.php' ?>
                     <div class="mb-3">
                         <label for="content" class="form-label">Content</label>
                         <textarea name="content" class="form-control" id="content" rows="5"
-                        placeholder="Post content"></textarea>
+                        placeholder="Post content"><?=old('content')?></textarea>
                         <?php if (isset($errors['content'])): ?>
                             <div class="invalid-feedback d-block">
                                 <?= $errors['content']  ?>
