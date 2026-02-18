@@ -5,7 +5,8 @@ require_once CORE . '/classes/Validator.php';
 /** @var  Db $db */
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
+        var_dump(mb_strlen('Привет', 'UTF-8'));
+        var_dump(strlen('Hello'));
         $fillable = ['title','excerpt', 'content'];
         $data = loadData($fillable);
         //dd($data);
@@ -24,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ],
         'content' => [
             'required' => true,
-            'min' => 100,
+            'min' => 10,
 
         ],
 
@@ -32,8 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $validator = new Validator();
         $validation = $validator->validate($data, $rules);
 
-        $errors = [];
+        if ($validation->hasErrors()) {
+           print_arr($validation->gerErrors());
+        } else {
+            echo 'Success !';
+        }
 
+        die;
 
 //
 //        if (empty($data['title']))
