@@ -5,8 +5,8 @@ require_once CORE . '/classes/Validator.php';
 /** @var  Db $db */
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        var_dump(mb_strlen('Привет', 'UTF-8'));
-        var_dump(strlen('Hello'));
+//        var_dump(mb_strlen('Привет', 'UTF-8'));
+//        var_dump(strlen('Hello'));
         $fillable = ['title','excerpt', 'content'];
         $data = loadData($fillable);
         //dd($data);
@@ -34,12 +34,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $validation = $validator->validate($data, $rules);
 
         if ($validation->hasErrors()) {
-           print_arr($validation->gerErrors());
+           print_arr($validation->getErrors());
         } else {
             echo 'Success !';
         }
 
-        die;
+//        var_dump($validation->hasErrors());
+      die;
 
 //
 //        if (empty($data['title']))
@@ -60,10 +61,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($db->query("INSERT INTO posts (title, excerpt, content) VALUES (:title, :excerpt, :content)", $data))
             {
                 echo 'OK !';
-            } else {
-                echo 'DateBase Error!';
             }
-//            redirect('/posts/create');
+            else
+            {
+                echo 'DateBase Error!';
+
+            }
+
+
+
         }
 }
 

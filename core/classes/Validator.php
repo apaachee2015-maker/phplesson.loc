@@ -33,12 +33,12 @@ class Validator {
 
     protected function check($field)
     {
-
+//        print_arr($field);
         foreach ($field['rules'] as $rule => $rule_value){
             if (in_array($rule, $this->rules_list)) {
                 if (!call_user_func_array([$this, $rule], [$field['value'], $rule_value])) {
                     $this->addError($field['fieldname'], str_replace(
-                        [':fieldname:', [':rulevalue:']],
+                        [':fieldname:', ':rulevalue:'],
                         [$field['fieldname'], $rule_value],
                         $this->messages[$rule])
                     );
@@ -53,7 +53,7 @@ class Validator {
     {
         $this->errors[$fieldname][] = $error;
     }
-    public function gerErrors()
+    public function getErrors()
     {
         return $this->errors;
     }
@@ -65,7 +65,7 @@ class Validator {
 
     protected function required($value, $rule_value)
     {
-        var_dump(__METHOD__, $value, $rule_value);
+//        var_dump(__METHOD__, $value, $rule_value);
         return !empty(trim($value));
     }
 
